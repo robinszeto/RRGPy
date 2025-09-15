@@ -1,44 +1,47 @@
-# RRGPy :bar_chart:
+# RRG Indicator Python Application
 
-This script generates a scatter plot of the JdK RS Ratio vs JdK RS Momentum, known as Relative Rotation Graph, for a set of tickers and displays their current status based on their position in the plot. The RRG (Relative Rotation Graph) Indicator is a visual tool used in technical analysis to identify and compare the relative strength of different assets in a market.
+This application visualizes Relative Rotation Graphs (RRG) for financial assets, showing their relative strength and momentum compared to a benchmark.
 
-![](rrgpy.png)
+## Features
+- Interactive visualization of RRG indicators for multiple tickers
+- Real-time updates with animated timeline
+- Adjustable time periods and tail lengths
+- Interactive sliders for date range selection
+- Symbol lookup and customization
 
-## Requirements
+## Prerequisites
+- Python 3.11.9 with tkinter support
 
-This script requires the following libraries:
-    tkinter
-    pandas
-    numpy
-    yfinance
-    matplotlib
-    scipy
+## Setup Instructions
 
-You can install them using pip
+### 1. Create Virtual Environment
+```bash
+python3 -m venv rrg_env
+```
 
-    pip install pandas numpy yfinance matplotlib scipy
+### 2. Activate Virtual Environment
+On macOS/Linux:
+```bash
+source rrg_env/bin/activate
+```
 
-## Usage
+On Windows:
+```cmd
+rrg_env\Scripts\activate
+```
 
-Clone this repository:
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-    git clone https://github.com/An0n1mity/RRGPy
+## Running the Application
 
-Open the rrg_indicator.py file and modify the following variables to suit your needs:
+After activating the virtual environment and installing dependencies:
+```bash
+python RRGIndicator.py
+```
 
-- **period**: the period of historical prices to retrieve (e.g., '1y', '3mo', '5d')
-- **tickers**: a list of ticker symbols for the assets you want to analyze
-- **tail**: the number of historical data points to display as markers (default is 5)
-- **tickers_to_show**: a list of ticker symbols to show in the scatter plot (default is all tickers)
-- **benchmark**: the benchmark asset to use for comparison (default is '^STOXX')
-- **window**: the window size for rolling calculations (default is 14)
+## Modifiable Parameters
 
-Run the script:
-
-    python rrg_indicator.py
-
-The script will generate a scatter plot with the JdK RS Ratio on the x-axis and JdK RS Momentum on the y-axis, as well as a table with the current status of each ticker based on their position in the plot. You can change the ticker by clicking on it in the table.
-
-## Ressources 
-- https://marginstone.com/how-to-create-a-relative-rotation-graph-on-excel/
-- Book new frontiers in technical analysis: effective tools and strategies for trading and investing paul ciana
+Refer to `parameters.md` for a detailed list of all configurable parameters in the application.

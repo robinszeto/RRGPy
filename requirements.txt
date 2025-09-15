@@ -1,0 +1,6 @@
+# Python 3.11.9 with tkinter support
+pandas
+numpy
+yfinance
+matplotlib
+scipy
